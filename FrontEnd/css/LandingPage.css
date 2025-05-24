@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  text-align: center;
+}
+
+.banner h1 {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 10vw;
+  letter-spacing: 20px;
+  color: rgba(0, 0, 0, 0.08);
+  margin: 0;
+  font-weight: 800;
+}
+
+/* Remove a barra de rolagem */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.quadrado {
+  position: fixed;
+  top: 0;
+  left: 3vw;
+  width: 70vw;
+  height: 50vw;
+  margin-top: 15vw;
+  background-color: #ffffff;
+  border-radius: 5% 5% 0 0;
+  
+  box-shadow: 0px -30px 50px -3px #172f6c36;
+}
+
+.quadrado-interno {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 40vw;
+  height: 30vw;
+  background-color: #FFFFFF;
+  background-color: #d9d9d934;
+    border-radius: 5% 5% 0 0;
+  
+}
+
+.botao-oval {
+  position: absolute;
+  bottom: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  width: 260px;            /* largura do botão */
+  height: 80px;            /* altura do botão */
+  border-radius: 40px;     /* metade da altura para deixar totalmente oval */
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.botao-oval h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.botao-oval a {
+  text-decoration: none;
+  font-weight: 900;
+  color: black;
+  background-color: transparent;
+  border: none;
+  font-family: 'Abhaya Libre', serif;
+}
+
+.botao-oval a.btn {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
