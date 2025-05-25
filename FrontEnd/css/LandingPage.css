@@ -1,76 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 
-body, html {
+html, body {
   margin: 0;
   padding: 0;
+  overflow: hidden;
   height: 100%;
+  width: 100%;
+  font-size: 1vw; /* base para usar rem/em de forma adaptativa */
 }
 
+/* Banner */
 .banner {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 30vh;
   text-align: center;
+  
 }
 
 .banner h1 {
   font-family: 'Abhaya Libre', serif;
   font-size: 10vw;
-  letter-spacing: 20px;
-  color: rgba(0, 0, 0, 0.08);
+  letter-spacing: 2.6vw;
+  color: #00000014;
   margin: 0;
   font-weight: 800;
 }
 
-/* Remove a barra de rolagem */
-body, html {
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-
+/* Quadrado externo */
 .quadrado {
   position: fixed;
   top: 0;
   left: 3vw;
-  width: 70vw;
-  height: 50vw;
+  width: 75vw;
+  height: 40vw;
   margin-top: 15vw;
   background-color: #ffffff;
   border-radius: 5% 5% 0 0;
-  
-  box-shadow: 0px -30px 50px -3px #172f6c36;
+  box-shadow: 0 -1.5vw 3vw rgba(23, 47, 108, 0.15); /* sombra sutil voltada para cima */
+  overflow: hidden;
 }
 
+/* Quadrado interno */
 .quadrado-interno {
   position: absolute;
   top: 10%;
   left: 40%;
   width: 40vw;
   height: 30vw;
-  background-color: #FFFFFF;
-  background-color: #d9d9d934;
-    border-radius: 5% 5% 0 0;
-  
+  background-color: #f7f6f6;
+  border-radius: 5% 5% 0 0;
+  overflow: hidden;
+  z-index: 200;
 }
 
+/* Botão oval */
 .botao-oval {
   position: absolute;
   bottom: 10vh;
-  left: 50%;
+  left: 90%;
   transform: translateX(-50%);
   background-color: white;
-  width: 260px;            /* largura do botão */
-  height: 80px;            /* altura do botão */
-  border-radius: 40px;     /* metade da altura para deixar totalmente oval */
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+  width: 13vw;       /* mais compacto na largura */
+  height: 4.5vw;     /* mais achatado */
+  border-radius: 2.25vw;  /* metade da altura para formato oval */
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  box-shadow: 0 -0.6vw 1.6vw rgba(0, 0, 0, 0.25); /* sombra mais acima e suave */
+  z-index: 1050;  /* garante que fique sobre outros elementos */
+  overflow: hidden; /* para esconder os excessos */
 }
 
 .botao-oval h1 {
@@ -80,11 +84,12 @@ body, html {
 
 .botao-oval a {
   text-decoration: none;
-  font-weight: 900;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 400; /* essa fonte só tem um peso */
   color: black;
   background-color: transparent;
   border: none;
-  font-family: 'Abhaya Libre', serif;
+  z-index: 20;
 }
 
 .botao-oval a.btn {
@@ -93,4 +98,192 @@ body, html {
   padding: 0;
   box-shadow: none;
 }
+
+
+.stars-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 48vw; /* dois grupos de 24vw */
+  height: 100%;
+  pointer-events: none;
+  display: flex;
+  animation: stars-move 3s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.botao-oval:hover .stars-wrapper {
+  opacity: 1;
+  background-color: #F88379 ;
+}
+
+.stars-group {
+  position: relative;
+  width: 24vw;  /* largura do grupo */
+  height: 100%;
+}
+
+/* estrelas absolutas dentro do grupo, posicionadas com as vars CSS */
+.star {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  color: #00000014; /* cor das estrelas */
+  fill: #00000014;
+  stroke: currentColor;
+}
+
+/* animação do loop */
+@keyframes stars-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-24vw);
+  }
+}
+
+
+.carousel-item {
+  position: relative;
+  height: 100vw; /* ou algum valor fixo/relativo */
+}
+
+#imagemSlide1 {
+  width: 160vw ;
+  height: 90vw ;
+  position: absolute;
+  left: -60vw;
+  margin-top: -33vw;
+  object-fit: contain;
+  z-index: 10; /* garante que fique acima de outros elementos */
+}
+#imagemSlide2 {
+  width: 160vw ;
+  height: 90vw ;
+  position: absolute;
+  left: -54vw;
+  margin-top: -29vw;
+  object-fit: contain;
+  z-index: 10; /* garante que fique acima de outros elementos */
+}
+
+
+/* Wrapper que contém as linhas - mantém overflow hidden para esconder o excesso */
+.texto-atras-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 5;
+  overflow: hidden;    /* essencial */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5vw 0;
+  transform: translateY(-40vw);
+}
+
+.linha1, .linha2 {
+  display: flex;
+  white-space: nowrap;
+  width: max-content;   /* importante para o loop perfeito */
+}
+
+/* Texto dentro das linhas, com espaço entre os spans para "respiro" */
+.linha1 span {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 400;
+  color: #bf6a0298;
+  font-size: 3vw;
+  display: inline-block;
+  pointer-events: none;
+  padding-right: 2vw;  /* espaçamento entre textos repetidos */
+}
+
+.linha2 span {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 400;
+  color: #522504a6;
+  font-size: 3vw;
+  display: inline-block;
+  pointer-events: none;
+  padding-right: 2vw;  /* espaçamento entre textos repetidos */
+}
+
+/* Animação para mover o texto para a direita */
+/* Animação para mover o texto para a ESQUERDA */
+.texto-esquerda {
+  animation: moverEsquerda 40s linear infinite;
+}
+
+/* Animação para mover o texto para a ESQUERDA mais lenta (opcional) */
+.texto-direita {
+  animation: moverEsquerdaLento 50s linear infinite;
+}
+
+/* Keyframes para mover o texto da DIREITA para a ESQUERDA */
+@keyframes moverEsquerda {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes moverEsquerdaLento {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+.texto-lateral-fixo {
+  position: absolute;
+  top: 60%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40vw;
+  text-align: left;
+  pointer-events: none;
+}
+
+.texto-lateral-fixo span#textoLateral1 {
+  position: absolute;
+  top: 50%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 2; /* ainda menor que .quadrado-interno (z-index: 200) */
+  text-align: left;
+  pointer-events: none;
+  font-family: 'Dosis', sans-serif;
+  font-weight: 300; /* ou 200, 300, 500, 800 conforme quiser */
+  color: #8d8d8dcb;
+  font-size: 3vw;
+  display: inline-block;
+  pointer-events: none;
+}
+
+.texto-lateral-fixo span#textoLateral2 {
+  position: absolute;
+  top: 53%;
+  left: 2%;
+  transform: translateY(-50%);
+  z-index: 2; /* ainda menor que .quadrado-interno (z-index: 200) */
+  text-align: left;
+  pointer-events: none;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 400;
+  color: #000000cc;
+  font-size: 3vw;
+  display: inline-block;
+  pointer-events: none;
+}
+
+
+
+
+
 
