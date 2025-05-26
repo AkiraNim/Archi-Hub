@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: sans-serif;
+  background: white;
+}
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cortina */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: white;
+  border-top: 0.1vw solid rgb(255, 255, 255);   /* começa branca */
+  border-bottom: 0.1vw solid white;
+  left: 0;
+  transition: transform 1s ease, border-color 0.5s ease;
+  z-index: 11;
+}
+
+.overlay::before {
+  top: 0;
+  transform: translateY(0);
+}
+
+.overlay::after {
+  bottom: 0;
+  transform: translateY(0);
+}
+
+.overlay.borders-black::before,
+.overlay.borders-black::after {
+  border-top-color: black;          /* depois vira preta */
+  border-bottom-color: black;
+}
+
+.overlay.animate::before {
+  transform: translateY(-100%);
+}
+
+.overlay.animate::after {
+  transform: translateY(100%);
+}
+
+/* Texto ARCHI HUB */
+.intro-text {
+  font-family: 'Abhaya Libre', serif;
+  font-size: 1.5vw;
+  letter-spacing: 0.6vw;
+  color: #000000;
+  margin: 0;
+  font-weight: 800;
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 13;
+  opacity: 1;
+  transition: opacity 0.5s ease; /* fade out igual à linha */
+}
+
+.intro-text.hide {
+  opacity: 0;
+}
+
+/* Linha horizontal */
+.line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0.1vw;
+  width: 100%;
+  background: black;
+  transform-origin: center center;
+  transform: translate(-50%, -50%) scaleX(0);
+  transition: transform 0.7s ease, opacity 0.5s ease;
+  z-index: 12;
+  opacity: 1;
+}
+
+.line.expand {
+  transform: translate(-50%, -50%) scaleX(1);
+}
+
+.line.hide {
+  display: none; /* sumir sem transição */
+}
+
+/* Conteúdo */
+.content {
+  opacity: 0;
+  display: none;
+}
+
+.content.show {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 2rem;
+}

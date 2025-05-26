@@ -25,3 +25,4 @@ document.addEventListener("DOMContentLoaded", function () {
   // Executa a cada 20 segundos
   setInterval(avancarParaDireita, 20000);
 });
+
