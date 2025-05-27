@@ -125,6 +125,15 @@ html, body {
   opacity: 1;
 }
 
-h1 {
-  font-size: 2rem;
+.quadrado {
+  position: fixed;
+  top: 0;
+  left: 3vw;
+  width: 80vw;
+  height: 40vw;
+  margin-top: 15vw;
+  background-color: #ffffff;
+  border-radius: 5% 5% 0 0;
+  box-shadow: 0 -1.5vw 3vw rgba(23, 47, 108, 0.15); /* sombra sutil voltada para cima */
+  overflow: hidden;
 }
