@@ -1,4 +1,16 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const ua = navigator.userAgent;
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
+
+  if (isMobile) {
+    console.log("Redirecionando para Main.html (mobile)");
+    window.location.href = "Main.html";
+    return;
+  }
+
+  console.log("Permanece na página atual.");
+
+  // Seu código do carrossel continua aqui:
   const carrosselImagens = document.querySelector('#carrosselImagens');
   const carrosselTextos = document.querySelector('#carrosselTextos');
 
@@ -16,13 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
     wrap: true,
   });
 
-  // Avança ambos sempre para a direita
   function avancarParaDireita() {
     instanciaImagens.next();
     instanciaTextos.next();
   }
 
-  // Executa a cada 20 segundos
   setInterval(avancarParaDireita, 20000);
 });
-
