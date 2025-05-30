@@ -24,11 +24,9 @@ html, body {
 
 .banner h1 {
   font-family: 'Abhaya Libre', serif;
-  font-size: 10vw;
-  letter-spacing: 2.6vw;
-  color: #00000014;
+  font-size: calc(2rem + 5vw);
+  color: rgba(0, 0, 0, 0.1);
   margin: 0;
-  font-weight: 800;
 }
 
 /* Quadrado externo */
