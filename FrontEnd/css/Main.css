@@ -71,7 +71,6 @@ html, body {
   transform: translateY(100%);
 }
 
-/* Texto ARCHI HUB */
 .intro-text {
   font-family: 'Abhaya Libre', serif;
   font-size: 1.5vw;
@@ -84,12 +83,16 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 13;
-  opacity: 1;
-  transition: opacity 0.5s ease; /* fade out igual à linha */
+  opacity: 0;             /* começa invisível */
+  transition: opacity 0.5s ease;
+}
+
+.intro-text.show {
+  opacity: 1;             /* ao adicionar essa classe, fica visível */
 }
 
 .intro-text.hide {
-  opacity: 0;
+  opacity: 0;             /* fade out */
 }
 
 /* Linha horizontal */

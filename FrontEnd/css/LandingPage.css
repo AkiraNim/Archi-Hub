@@ -6,7 +6,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
   height: 100%;
   width: 100%;
   font-size: 1vw; /* base para usar rem/em de forma adaptativa */
@@ -17,7 +16,7 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 30vh;
+  height: 20vh;
   text-align: center;
   
 }
@@ -29,13 +28,14 @@ html, body {
   margin: 0;
 }
 
+
 /* Quadrado externo */
-.quadrado {
-  position: fixed;
-  top: 0;
+.main-square {
+  position: absolute;
+  top: -3vh;
   left: 3vw;
   width: 75vw;
-  height: 40vw;
+  height: 36vw;
   margin-top: 15vw;
   background-color: #ffffff;
   border-radius: 5% 5% 0 0;
@@ -44,7 +44,7 @@ html, body {
 }
 
 /* Quadrado interno */
-.quadrado-interno {
+.intern-square {
   position: absolute;
   top: 10%;
   left: 40%;
@@ -56,45 +56,12 @@ html, body {
   z-index: 200;
 }
 
-.botao-oval {
-  position: absolute;
-  bottom: 10vh;
-  left: 90%;
-  transform: translateX(-50%);
-  width: 13vw;
-  height: 4.5vw;
-  border-radius: 2.25vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Dela Gothic One', sans-serif;
-  font-weight: 400;
-  color: black;
-  text-decoration: none;
-  background-color: transparent;
-  border: none;
-  box-shadow: 0 -0.6vw 1.6vw rgba(0, 0, 0, 0.25);
-  z-index: 20;
-  overflow: hidden;
-  transition:
-    color 0.3s ease-in-out,
-    box-shadow 0.3s ease-in-out,
-    background-image 0.3s ease-in-out;
-  
-}
-
-.botao-oval:hover {
-  background-image: linear-gradient(135deg, #5225048c, rgba(44, 25, 25, 0.342));
-  color: white;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
 .carousel-item {
   position: relative;
   height: 100vw; /* ou algum valor fixo/relativo */
 }
 
-#imagemSlide1 {
+#image-slide1 {
   width: 160vw ;
   height: 90vw ;
   position: absolute;
@@ -103,18 +70,18 @@ html, body {
   object-fit: contain;
   z-index: 10; /* garante que fique acima de outros elementos */
 }
-#imagemSlide2 {
+#image-slide2 {
   width: 160vw ;
   height: 90vw ;
   position: absolute;
-  left: -54vw;
+  left: -61vw;
   margin-top: -29vw;
   object-fit: contain;
   z-index: 10; /* garante que fique acima de outros elementos */
 }
 
 /* Wrapper que contém as linhas - mantém overflow hidden para esconder o excesso */
-.texto-atras-wrapper {
+.text-wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -128,58 +95,54 @@ html, body {
   padding: 5vw 0;
   transform: translateY(-40vw);
 }
-
-.linha1, .linha2 {
+.line1, .line2 {
   display: flex;
   white-space: nowrap;
-  width: max-content;   /* importante para o loop perfeito */
+  width: max-content;
 }
 
-/* Texto dentro das linhas, com espaço entre os spans para "respiro" */
-.linha1 span {
-  font-family: 'Dela Gothic One', sans-serif;
-  font-weight: 400;
-  color: #bf6a0298;
-  font-size: 3vw;
-  display: inline-block;
-  pointer-events: none;
-  padding-right: 2vw;  /* espaçamento entre textos repetidos */
-}
-
-.linha2 span {
+.line1 span {
   font-family: 'Dela Gothic One', sans-serif;
   font-weight: 400;
   color: #522504a6;
   font-size: 3vw;
   display: inline-block;
   pointer-events: none;
-  padding-right: 2vw;  /* espaçamento entre textos repetidos */
+  padding-right: 2vw;
 }
 
-/* Animação para mover o texto para a direita */
-/* Animação para mover o texto para a ESQUERDA */
-.texto-esquerda {
-  animation: moverEsquerda 40s linear infinite;
+.line2 span {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 400;
+  color: #bf6a0298;
+  font-size: 3vw;
+  display: inline-block;
+  pointer-events: none;
+  padding-right: 2vw;
 }
 
-/* Animação para mover o texto para a ESQUERDA mais lenta (opcional) */
-.texto-direita {
-  animation: moverEsquerdaLento 50s linear infinite;
+
+.text-left {
+  animation: moveLeft 40s linear infinite;
 }
 
-/* Keyframes para mover o texto da DIREITA para a ESQUERDA */
-@keyframes moverEsquerda {
+
+.text-right {
+  animation: moveLeftSlow 50s linear infinite;
+}
+
+@keyframes moveLeft {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
-@keyframes moverEsquerdaLento {
+@keyframes moveLeftSlow {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
 }
 
 
-.texto-lateral-fixo {
+.fixed-lateral-text {
   position: absolute;
   top: 60%;
   left: 2%;
@@ -190,12 +153,12 @@ html, body {
   pointer-events: none;
 }
 
-.texto-lateral-fixo span#textoLateral1 {
+.fixed-lateral-text span#later-text1 {
   position: absolute;
   top: 50%;
   left: 2%;
   transform: translateY(-50%);
-  z-index: 2; /* ainda menor que .quadrado-interno (z-index: 200) */
+  z-index: 2; /* ainda menor que .intern-square (z-index: 200) */
   text-align: left;
   pointer-events: none;
   font-family: 'Dosis', sans-serif;
@@ -206,12 +169,12 @@ html, body {
   pointer-events: none;
 }
 
-.texto-lateral-fixo span#textoLateral2 {
+.fixed-lateral-text span#later-text2 {
   position: absolute;
   top: 53%;
   left: 2%;
   transform: translateY(-50%);
-  z-index: 2; /* ainda menor que .quadrado-interno (z-index: 200) */
+  z-index: 2; /* ainda menor que .intern-square (z-index: 200) */
   text-align: left;
   pointer-events: none;
   font-family: 'Dela Gothic One', sans-serif;
@@ -222,8 +185,89 @@ html, body {
   pointer-events: none;
 }
 
+#semicircle-transition {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  width: 200vw;
+  height: 100vw;
+  background-color: white;
+  border-top-left-radius: 100vw;
+  border-top-right-radius: 100vw;
+  z-index: 9999;
+  pointer-events: none;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+#semicircle-transition.animate {
+  animation: semicircleRise 2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes semicircleRise {
+  0% {
+    transform: translateX(-50%) translateY(0) scale(0.1);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-150vh) scale(3.5);
+  }
+}
+
+.scroll-indicator {
+  position: fixed;
+  top: 55vh;
+  left: 90%;
+  transform: translateX(-50%);
+  z-index: 999;
+  pointer-events: none;
+  width: 10vw;
+  text-align: center;
+}
+
+.scroll-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1vh; /* define o espaço real entre texto e seta */
+  position: relative;
+  animation: moveUpDownFade 10s ease-in-out forwards;
+}
+
+.scroll-text {
+  margin-top: -6vh;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 400;
+  font-size: 1.2vw;
+  color: #000;
+}
+
+.fast-arrow {
+  width: 23vw; /* tamanho da seta */
+  height: auto;
+  animation-name: arrowPulseFast;
+  animation: arrowPulseFast 10s ease-in-out forwards;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 4;
+  animation-fill-mode: forwards;
+}
 
 
+@keyframes moveUpDownFade {
+  0% { top: 0; opacity: 0; }
+  10% { opacity: 1; }
+  25% { top: 8vh; opacity: 1; }
+  50% { top: 0; opacity: 1; }
+  75% { top: 8vh; opacity: 1; }
+  90% { opacity: 1; }
+  100% { top: 0; opacity: 0; }
+}
 
-
+@keyframes arrowPulseFast {
+  0%, 100% { transform: translateY(0); }
+  25%, 75% { transform: translateY(2.5vh); }
+  50% { transform: translateY(0); }
+}
 
