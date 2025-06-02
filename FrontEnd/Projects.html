@@ -13,6 +13,7 @@
 <body>
     <div class="wrapper">
         <div class="content">
+         
             <nav class="navbar navbar-expand-lg fixed-top ">
                <div class="container-fluid">
                   <a class="navbar-brand" href="LandingPage.html">ARCHI HUB</a>
@@ -45,34 +46,55 @@
                </div>
             </nav>
             <div id="main-square" class="main-square">
-               <span class="section-title">Our Projects</span>
+               <div class="section-title">
+                  <span class="span1">Our</span>
+                  <span class = "span2"> Projects</span>
+               </div>
+               
                <div id = "main-square-intern1" class="main-square-intern">
                   
-                  <div id="verticalGroupCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="100000" style="max-width: 100vw; overflow-x: visible;">
+                  <div id="verticalGroupCarousel" class="carousel slide" data-bs-ride="false" style="max-width: 100vw; overflow-x: visible;">
   <div class="carousel-inner" style="overflow: visible;">
     <!-- Slide 1 -->
     <div class="carousel-item active">
       <div class="item-group">
         <div class="item">
-          <img src="https://picsum.photos/id/1015/100/100" alt="Imagem 1" />
+            <div class="square-video">
+               <video class="hover-video" muted loop preload="metadata" src="mp4/A_sleek_single_202506010328 (1).mp4"></video>
+            </div>
+          <div class="item-text">
+            <h5>Brutown Project</h5>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+          </div>
+          <div class="main-intern-square">
+            <a href="BrutownProject.html" class="view-project">VIEW PROJECT</a>
+         </div>
+        </div>
+        
+        <div class="item">
+          <div class="square-video">
+               <video class="hover-video" muted loop preload="metadata" src="mp4/An_imposing_single_202506010329.mp4"></video>
+            </div>
           <div class="item-text">
             <h5>Sample Project</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
+          <div class="main-intern-square">
+            <a href="#" class="view-project">VIEW PROJECT</a>
+         </div>
         </div>
+
         <div class="item">
-          <img src="https://picsum.photos/id/1025/100/100" alt="Imagem 2" />
+          <div class="square-video">
+               <video class="hover-video" muted loop preload="metadata" src="mp4/1721286-hd_1920_1080_25fps.mp4"></video>
+            </div>
           <div class="item-text">
-            <h5>Título 2</h5>
+            <h5>Sample Project</h5>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
-        </div>
-        <div class="item">
-          <img src="https://picsum.photos/id/1035/100/100" alt="Imagem 3" />
-          <div class="item-text">
-            <h5>Título 3</h5>
-            <p>Outro texto explicativo para o item 3.</p>
-          </div>
+          <div class="main-intern-square">
+            <a href="#" class="view-project">VIEW PROJECT</a>
+         </div>
         </div>
       </div>
     </div>
@@ -81,51 +103,75 @@
     <div class="carousel-item">
       <div class="item-group">
         <div class="item">
-          <img src="https://picsum.photos/id/1045/100/100" alt="Imagem 4" />
+          <div class="square-video">
+               <video class="hover-video" muted loop preload="metadata" src="mp4/2314142-hd_1280_720_24fps.mp4"></video>
+            </div>
           <div class="item-text">
-            <h5>Título 4</h5>
-            <p>Descrição do item 4, texto ao lado.</p>
+            <h5>Sample Project</h5>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
+          <div class="main-intern-square">
+            <a href="#" class="view-project">VIEW PROJECT</a>
+         </div>
         </div>
         <div class="item">
-          <img src="https://picsum.photos/id/1055/100/100" alt="Imagem 5" />
+          <div class="square-video">
+               <video class="hover-video" muted loop preload="metadata" src="mp4/A_sleek_single_202506010328 (1).mp4"></video>
+            </div>
           <div class="item-text">
-            <h5>Título 5</h5>
-            <p>Descrição do item 5, texto mais curto.</p>
+            <h5>Sample Project</h5>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
+          <div class="main-intern-square">
+            <a href="#" class="view-project">VIEW PROJECT</a>
+         </div>
         </div>
         <div class="item">
-          <img src="https://picsum.photos/id/1065/100/100" alt="Imagem 6" />
+          <div class="square-video">
+               <img src="jpg/pexels-expect-best-79873-323780.jpg" alt="">
+            </div>
           <div class="item-text">
-            <h5>Título 6</h5>
-            <p>Descrição do item 6 para fechar o grupo.</p>
+            <h5>Sample Project</h5>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
           </div>
+          <div class="main-intern-square">
+            <a href="#" class="view-project">VIEW PROJECT</a>
+         </div>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Controles -->
+   <div class="carousel-status" style="text-align:center; margin-top: 1rem; font-weight: bold;">
+               <span id="slide-number">1</span> <span>/</span> <span id="slide-total">3</span>
+               <div class="button-wrapper">
+      <button class="carousel-control-prev" type="button" data-bs-target="#verticalGroupCarousel" data-bs-slide="prev" style="z-index: 1050;">
+         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
+            <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
+         </svg>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#verticalGroupCarousel" data-bs-slide="next" style="z-index: 1050;">
+         <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
+            <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
+         </svg>
+      </button>
+   </div>
+   </div>
   
 </div>
-<button class="carousel-control-prev" type="button" data-bs-target="#verticalGroupCarousel" data-bs-slide="prev" style="z-index: 1050;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
-      <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-    </svg>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#verticalGroupCarousel" data-bs-slide="next" style="z-index: 1050;">
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
-      <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-    </svg>
-  </button>
+   
+
 
                      
                   </a>
                </div>
+               
             </div>
             
         </div>
     </div>
+    
     <footer class="site-footer">
                <div class="footer-content">
                   <div class="footer-column">
@@ -163,6 +209,7 @@
             </footer>
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+<script src="js/Projects.js"></script>
 
 </body>
 </html>

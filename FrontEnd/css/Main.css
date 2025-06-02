@@ -11,7 +11,7 @@
 }
 
 html, body {
-  height: 100%;
+  height: auto;
   font-family: sans-serif;
   background: white;
   scroll-behavior: smooth;
@@ -146,7 +146,6 @@ html, body {
   border: none;
   padding: 12px 0;
   z-index: 1000;
-  scroll-snap-align: start;
 }
 
 .navbar .container-fluid {
@@ -154,7 +153,6 @@ html, body {
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2vw;
-  scroll-snap-align: start;
 }
 
 .navbar-brand {
@@ -169,7 +167,6 @@ html, body {
   font-size: 1.5rem;
   color: #000 !important;
   z-index: 1050;  /* pra ficar acima dos outros elementos */
-  
 }
 
 
@@ -242,7 +239,6 @@ html, body {
     font-size: 1.4rem;
   }
 }
-
 .wrapper {
   position: relative;
   width: 100vw;
@@ -346,19 +342,23 @@ html, body {
   padding: 0;
 }
 
-
-.carousel-control-prev {
-  position: relative;
-  margin-left: 10vh;
-  transform: translateY(30%);
-  z-index: 1000;
+.carousel-control-prev,
+.carousel-control-next {
+  top: 0%;
+  width: 5rem;
+  height: 5rem;
+  opacity: 1;
+  z-index: 1050;
+  background-color: #000;
 }
 
-.carousel-control-next {
+.button-wrapper{
   position: relative;
-  margin-right: 152vh; 
-  transform: translateY(30%);
-  z-index: 1000;
+  align-items: center;
+  width: 10vw;
+  height: 20vh;
+  left: 0rem;
+  bottom: 8rem;
 }
 
 
@@ -376,10 +376,8 @@ html, body {
   font-family: 'Dosis', sans-serif;
   font-size: 2rem;
   font-weight: 400;
-  
-  
   top: 82vh;
-  margin-left: 14vw;
+  margin-left: 8vw;
 }
 
 .main-intern-square {
