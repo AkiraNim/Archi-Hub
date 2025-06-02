@@ -2,14 +2,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const ua = navigator.userAgent;
   const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(ua);
 
-  if (isMobile) {
-    console.log("Redirecionando para Main.html (mobile)");
-    window.location.href = "Main.html";
-    return;
-  }
-
-  console.log("Permanece na página atual.");
-
   // Seu código do carrossel continua aqui:
   const carouselImages = document.querySelector('#carousel-images');
   const carouselText = document.querySelector('#carousel-text');
@@ -69,3 +61,5 @@ function restartScrollAnimation() {
   }
 
   setInterval(restartScrollAnimation, 15000); // 10s animação + 5s pausa
+
+  localStorage.removeItem('played');
