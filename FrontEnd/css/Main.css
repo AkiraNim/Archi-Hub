@@ -37,7 +37,7 @@ html, body {
   width: 100%;
   height: 50%;
   background: white;
-  border-top: 0.05vw solid rgb(255, 255, 255);   /* começa branca */
+  border-top: 0.05vw solid rgb(255, 255, 255);
   border-bottom: 0.05vw solid white;
   left: 0;
   transition: transform 1s ease, border-color 0.5s ease;
@@ -56,7 +56,7 @@ html, body {
 
 .overlay.borders-black::before,
 .overlay.borders-black::after {
-  border-top-color: rgba(0, 0, 0, 0.192);          /* depois vira preta */
+  border-top-color: rgba(0, 0, 0, 0.192);
   border-bottom-color: rgba(0, 0, 0, 0.192);
 }
 
@@ -80,19 +80,18 @@ html, body {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 13;
-  opacity: 0;             /* começa invisível */
+  opacity: 0;
   transition: opacity 0.8s ease;
 }
 
 .intro-text.show {
-  opacity: 1;             /* ao adicionar essa classe, fica visível */
+  opacity: 1;
 }
 
 .intro-text.hide {
-  opacity: 0;             /* fade out */
+  opacity: 0;
 }
 
-/* Linha horizontal */
 .line {
   position: absolute;
   top: 50%;
@@ -112,10 +111,9 @@ html, body {
 }
 
 .line.hide {
-  display: none; /* sumir sem transição */
+  display: none;
 }
 
-/* Conteúdo */
 .content {
   opacity: 0;
   display: none;
@@ -129,7 +127,7 @@ html, body {
   display: flex;
   position: relative;
   justify-content: center;
-  align-items: center; /* ⛔ Isso centraliza verticalmente */
+  align-items: center;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
@@ -149,7 +147,7 @@ html, body {
 }
 
 .navbar .container-fluid {
-  position: relative; /* serve de referência para position absolute da logo */
+  position: relative;
   max-width: 1440px;
   margin: 0 auto;
   padding: 0 2vw;
@@ -158,24 +156,21 @@ html, body {
 .navbar-brand {
   position: relative;
   display: flex;
-  left: 10;     /* distância da esquerda da tela */
-  margin-top: 5vh;       /* posição vertical */
-  transform: translateY(-50%); /* centraliza verticalmente */
+  left: 10;
+  margin-top: 5vh;
+  transform: translateY(-50%);
   font-family: 'Abhaya Libre', serif;
   letter-spacing: 0.3vw;
   font-weight: 400;
   font-size: 1.5rem;
   color: #000 !important;
-  z-index: 1050;  /* pra ficar acima dos outros elementos */
+  z-index: 1050;
 }
 
-
-/* LINKS */
 .navbar-nav {
   display: flex;
   gap: 3vw;
   padding-right: 0;
-  
 }
 
 .navbar-nav .nav-link {
@@ -192,7 +187,6 @@ html, body {
   color: #aaa !important;
 }
 
-/* Underline da página ativa */
 .navbar-nav .nav-link.active::after {
   content: '';
   position: relative;
@@ -202,7 +196,6 @@ html, body {
   background-color: #000;
 }
 
-/* HAMBURGER BUTTON */
 .navbar-toggler {
   border: none;
   padding-right: 16px;
@@ -213,7 +206,6 @@ html, body {
   height: 24px;
 }
 
-/* RESPONSIVO */
 @media (max-width: 991.98px) {
   .navbar {
     padding: 16px 0;
@@ -258,7 +250,7 @@ html, body {
   margin-top: 15vw;
   background-color: #ffffff;
   border-radius: 5% 5% 0 0;
-  box-shadow: 0 -1.5vw 3vw rgba(23, 47, 108, 0.15); /* sombra sutil voltada para cima */
+  box-shadow: 0 -1.5vw 3vw rgba(23, 47, 108, 0.15);
   overflow: hidden;
 }
 
@@ -278,7 +270,7 @@ html, body {
   justify-content: center;
   align-items: center;
   height: 100%;
-  overflow: hidden; /* evita que a imagem transborde */
+  overflow: hidden;
 }
 
 #image-slide1 {
@@ -310,7 +302,6 @@ html, body {
   height: 250vh;
   object-fit: contain;
 }
-
 
 #image-slide3 {
   position: absolute;
@@ -361,7 +352,6 @@ html, body {
   bottom: 8rem;
 }
 
-
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   filter: brightness(0);
@@ -411,7 +401,7 @@ html, body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 90vw; /* ajuste conforme o tamanho desejado */
+  width: 90vw;
   height: 90vw;
   transform: translate(-50%, -50%);
   border-radius: 50%;
@@ -424,7 +414,6 @@ html, body {
   animation: rotateCircle 20s linear infinite;
 }
 
-/* animação de rotação contínua */
 @keyframes rotateCircle {
   0% {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -457,10 +446,9 @@ html, body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover; /* cobre todo o espaço sem distorcer */
+  object-fit: cover;
   z-index: 0;
   filter: blur(0.3vw) opacity(2);
-   /* efeito de desfoque e opacidade */
 }
 
 .text-overlay {
@@ -468,19 +456,19 @@ html, body {
   z-index: 1;
   width: 100%;
   height: 100%;
-  padding: 5vw; /* ou ajuste conforme preferir */
+  padding: 5vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  pointer-events: none; /* opcional, impede interação com texto */
+  pointer-events: none;
 }
 
 .animated-paragraph {
-  color: rgb(110, 110, 110); /* ou outra cor legível */
-  font-size: 1.2vw; /* ajuste conforme necessário */
+  color: rgb(110, 110, 110);
+  font-size: 1.2vw;
   max-width: 60vw;
   line-height: 1.6;
-  background-color: rgba(0, 0, 0, 0.589); /* opcional para contraste */
+  background-color: rgba(0, 0, 0, 0.589);
   padding: 2vw;
   border-radius: 1vw;
 }
@@ -503,8 +491,8 @@ html, body {
 
 .third-square .section-title {
   position: absolute;
-  top: 0.5rem;    /* distancia do topo da div */
-  left: 1rem;   /* distancia da esquerda da div */
+  top: 0.5rem;
+  left: 1rem;
   font-size: 2.5rem;
   font-weight: 400;
   font-family: 'Dosis', sans-serif;
@@ -522,14 +510,13 @@ html, body {
   object-fit: cover;
   filter: grayscale(70%) blur(0.3vw) opacity(0.5);
   z-index: 1;
-   /* fica atrás dos outros elementos */
 }
 
 .third-square-intern1 {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: transparent; /* ou #eeeeee00 */
+  background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -657,7 +644,6 @@ html, body {
 .fourth-square{
   position: relative;
   top: 310vh;
-
   width: 100vw;
   height: 100vh;
   background-color: #f5f5f5;
@@ -673,8 +659,8 @@ html, body {
 
 .fourth-square .section-title {
   position: absolute;
-  top: 0.5rem;    /* distancia do topo da div */
-  left: 1rem;   /* distancia da esquerda da div */
+  top: 0.5rem;
+  left: 1rem;
   font-size: 2.5rem;
   font-weight: 400;
   font-family: 'Dosis', sans-serif;
@@ -687,7 +673,7 @@ html, body {
   position: relative;
   width: 100vw;
   height: 100vh;
-  background-color: transparent; /* ou #eeeeee00 */
+  background-color: transparent;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -706,7 +692,6 @@ html, body {
   z-index: 1;
 }
 
-
 .fourth-square-intern1 {
   display: flex;
   flex-wrap: wrap;
@@ -715,7 +700,6 @@ html, body {
   align-items: flex-start;
   z-index: 2;
 }
-
 
 .contact-form {
   position: absolute;
@@ -790,7 +774,7 @@ html, body {
 
 .site-footer {
   position: absolute;
-  top: 710vh; /* 100vh depois do .fourth-square */
+  top: 710vh;
   width: 100vw;
   padding: 6vw;
   background-color: #1d1d1d;

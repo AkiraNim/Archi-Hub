@@ -120,13 +120,18 @@ html, body {
   position: relative;
   width: 20vh;
   height: 10vh;
-  top: 0rem;
+  top: 4rem;
   left: 0vw;
   font-size: 2.5rem;
   padding: 6rem;
   z-index: 2;
   margin-top: -5vh;
   margin-bottom: 15vh;
+  
+}
+
+.section-title a{
+  text-decoration: none;
 }
 
 .span1{
@@ -140,119 +145,136 @@ html, body {
   color: #000000;
 }
 
-#main-square {
+.main-square {
   width: 100vw;
+  height: auto;
   margin: auto;
   overflow: visible;
+  
 }
 
-.item-group {
+.first-intern-square{
+    position: relative;
+    width: 90vw;
+    height: auto;
+    left: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 1rem;
+    margin-bottom: 2vh;
+    margin-top: 10vh;
+}
+
+
+.img1-wrapper {
+  width: 85vw;
+  height: 50vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  width: 90VW;
-  gap: 1.5rem;
-  left: 8rem;
-  overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
-.carousel-item {
-  display: block;
-  overflow-x: auto;
-  white-space: nowrap;
-  padding-bottom: 1rem;
-}
-
-.item {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  border: 0.1vw solid #cccccc34;
-  padding: 10px;
-  border-radius: 6px;
-  background: #f8f9fa;
-  white-space: normal;
-}
-
-.item img {
-  width: 30vw;
-  height: 30vh;
+.img1-wrapper img {
+  width: 100%;
+  max-width: 100%;
+  height: 48vh;
+  border-radius: 0.5rem;
   object-fit: cover;
-  border-radius: 8px;
-  flex-shrink: 0;
 }
 
-.square-video{
-  width: 30vw;
-  height: 30vh;
-  border-radius: 1vw;
+.second-intern-square {
+  position: relative;
+  width: 90vw;
+  max-width: 90vw;
+  left: 5vw;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
   overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 2vh;
+  padding: 2rem;
+  gap: 10vw;
 }
 
-.hover-video {
-  width: 30vw;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-  border-radius: 20px;
-  flex-shrink: 0;
-  pointer-events: none;
+.img2-wrapper {
+  position: relative;
+  left: 1vw;
+  width: 50vw;
+  max-width: 200vw;
+  height: 40vh;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.item:hover .hover-video {
-  transform: scale(1.02);
-  pointer-events: auto;
+.img2-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.5rem;
 }
 
 .item-text {
-  margin-left: 2rem;
-  white-space: normal;
-  max-width: 50vw;
-  flex-shrink: 0;
+  width: 70%;
+  font-size: 1rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.main-intern-square {
+.third-intern-square {
   position: relative;
-  top: 25vh;
-  left: 0.5vw;
-  border: 0.1vw solid #0000007a;
-  width: 10vw;
-  height: 3vw;
-  background-color: white;
+  width: 90vw;
+  height: 50vh;
+  left: 5vw;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  z-index: 20;
+  gap: 5vw;
+  overflow: hidden;
+  border-radius: 1rem;
+  margin-bottom: 5vh;
 }
 
-.view-project {
-  font-family: 'Dosis', sans-serif;
-  color: black;
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 1vw;
-  transition: color 0.3s ease;
+.img3-wrapper {
+  width: calc((90vw - 10vw) / 2);
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.main-intern-square:hover .view-project {
-  color: gray;
+.img3-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
 }
 
-.carousel-inner {
-  position: relative;
-  left: 5vw;
-  margin-top: 10%;
-  min-height: 380px;
-}
+@media (max-width: 768px) {
+  .second-intern-square {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.carousel-control-prev,
-.carousel-control-next {
-  top: 0%;
-  width: 5rem;
-  height: 5rem;
-  opacity: 1;
-  z-index: 1050;
-  background-color: #000;
+  .img2-wrapper,
+  .item-text {
+    width: 100%;
+  }
+
+  .item-text {
+    margin-top: 1rem;
+  }
 }
 
 .button-wrapper{
@@ -261,20 +283,6 @@ html, body {
   width: 10vw;
   height: 20vh;
   left: 45vw;
-}
-
-.carousel-status {
-  position: relative;
-  top: 0vh;
-  right: 0vw;
-}
-
-.carousel-status span{
-  font-family: 'Dosis', sans-serif;
-  font-size: 2rem;
-  font-weight: 400;
-  position: relative;
-  top: 15vh;
 }
 
 .site-footer {
