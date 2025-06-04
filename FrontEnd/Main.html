@@ -2,15 +2,10 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <title>Main</title>
+      <title>ArchiHub</title>
       <link rel="stylesheet" href="css/Main.css" />
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" 
-         rel="stylesheet" 
-         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
-         crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
    </head>
-   <header>
-   </header>
    <body>
       <div class="wrapper">
          <div class="overlay" id="overlay"></div>
@@ -18,45 +13,51 @@
          <div class="line" id="line"></div>
          <div class="content">
             <header>
-                <nav class="navbar navbar-expand-lg fixed-top ">
-               <div class="container-fluid">
-                  <a class="navbar-brand" href="LandingPage.html">ARCHI HUB</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
-                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation" >
-                  <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarContent">
-                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                           <a class="nav-link active" aria-current="page" href="Main.html">MAIN</a>
-                        </li>
-                        <li class="nav-item">
-                           <a class="nav-link" href="Projects.html">PROJECTS</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                           <a class="nav-link" href="Login.html">EMPLOYEE</a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </nav>
-            </header>
-            <div class="carousel-status" style="text-align:center; margin-top: 1rem; font-weight: bold;">
-                        <span id="slide-number">1</span> <span>/</span> <span id="slide-total">3</span>
-                        <div class="button-wrapper">
-                           <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev" style="z-index: 1050;">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
-                                 <path d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/>
-                              </svg>
-                           </button>
-                           <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next" style="z-index: 1050;">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
-                                 <path d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-                              </svg>
-                           </button>
-                        </div>
+               <nav class="navbar navbar-expand-lg fixed-top ">
+                  <div class="container-fluid">
+                     <a class="navbar-brand" href="LandingPage.html">ARCHI HUB</a>
+                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+                        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                           <li class="nav-item">
+                              <a class="nav-link active" aria-current="page" href="Main.html">MAIN</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="Projects.html">PROJECTS</a>
+                           </li>
+
+                           <li class="nav-item">
+                              <a class="nav-link" href="Login.html">EMPLOYEE</a>
+                           </li>
+                        </ul>
                      </div>
+                  </div>
+               </nav>
+            </header>
+
+            <div class="carousel-status" style="text-align:center; margin-top: 1rem; font-weight: bold;">
+               <span id="slide-number">1</span> <span>/</span> <span id="slide-total">3</span>
+               <div class="button-wrapper">
+                  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev"
+                     style="z-index: 1050;">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
+                        <path
+                           d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z" />
+                     </svg>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next"
+                     style="z-index: 1050;">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" viewBox="0 0 16 16">
+                        <path
+                           d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                     </svg>
+                  </button>
+               </div>
+            </div>
+
             <div class="carousel-wrapper">
                <div class="main-square">
                   <div class="main-intern-square">
@@ -81,25 +82,30 @@
                   </div>
                </div>
             </div>
+
             <div id="second-square" class="second-square">
                <video id="second-square-mp4" autoplay muted loop playsinline class="second-square-video">
-                  <source  src="mp4/A_sleek_single_202506010328 (1).mp4" type="video/mp4">
+                  <source src="mp4/A_sleek_single_202506010328 (1).mp4" type="video/mp4">
                   Seu navegador não suporta o elemento de vídeo.
                </video>
                <div class="text-overlay">
                   <p class="animated-paragraph">
                      Who we are<br><br>
-                     We are a passionate team of architects committed to shaping inspiring and sustainable spaces. 
-                     With a blend of creativity, technical expertise, and attention to detail, we transform ideas into reality—creating environments that enhance everyday life.
-                     Our diverse backgrounds and collaborative approach allow us to deliver innovative solutions tailored to each client’s unique vision. 
+                     We are a passionate team of architects committed to shaping inspiring and sustainable spaces.
+                     With a blend of creativity, technical expertise, and attention to detail, we transform ideas into
+                     reality—creating environments that enhance everyday life.
+                     Our diverse backgrounds and collaborative approach allow us to deliver innovative solutions tailored
+                     to each client’s unique vision.
                      From residential homes to commercial projects, we strive for excellence at every step.
-                     At the heart of our work lies a dedication to quality, functionality, and aesthetics. Together, we build not just structures, but lasting relationships and communities.
+                     At the heart of our work lies a dedication to quality, functionality, and aesthetics. Together, we
+                     build not just structures, but lasting relationships and communities.
                   </p>
                </div>
             </div>
+
             <div id="third-square" class="third-square">
                <span class="section-title">Our Projects</span>
-               <div id = "third-square-intern1" class="third-square-intern">
+               <div id="third-square-intern1" class="third-square-intern">
                   <img id="blueprint-img" src="jpg/pexels-pixabay-271667.jpg" alt="blueprint">
                   <div class="small-square1">
                      <img src="gif/13798770_1080_1920_30fps-ezgif.com-video-to-gif-converter.gif" alt="animated gif" />
@@ -123,6 +129,7 @@
                   </a>
                </div>
             </div>
+
             <div id="fourth-square" class="fourth-square">
                <span class="section-title">Contact Us</span>
                <div id="fourth-square-intern1" class="fourth-square-intern">
@@ -140,6 +147,7 @@
                   </form>
                </div>
             </div>
+            
             <footer class="site-footer">
                <div class="footer-content">
                   <div class="footer-column">
@@ -149,10 +157,10 @@
                      <h4>Information</h4>
                      <ul>
                         <li><a href="Main.html">Main</a></li>
-                        
+
                         <li><a href="Projects.html">Projects</a></li>
-                        
-                        
+
+
                      </ul>
                   </div>
                   <div class="footer-column">
@@ -177,9 +185,10 @@
             </footer>
          </div>
       </div>
+
       <script src="js/Main.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" 
-         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" 
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
          crossorigin="anonymous"></script>
    </body>
 </html>
