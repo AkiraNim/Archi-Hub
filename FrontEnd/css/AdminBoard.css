@@ -209,3 +209,53 @@ html, body {
   font-size: 2vw;
   color: #3498db;
 }
+
+.custom-carousel {
+  position: relative;
+  width: 65vw; 
+  height: 20vh;          /* 3 cards * 20vw */
+  overflow: hidden;
+  margin-left: 5vw;      /* igual ao left dos cards */
+  margin-top: 5vh;
+  border-radius: 1.5vw;
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: slideCarousel 100s linear infinite;
+}
+
+.carousel-item {
+  flex: 0 0 20vw;
+  height: 20vh;
+  background-color: #f0f0f0; /* mais visível */
+  margin-right: 2vw;
+  border-radius: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw; /* maior */
+  font-weight: bold;
+  color: #111;
+  font-family: 'Dela Gothic One', sans-serif;
+  box-shadow:
+    0 6px 12px rgba(0, 0, 0, 0.15),
+    0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slideCarousel {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(0); }
+  25% { transform: translateX(-22vw); }
+  45% { transform: translateX(-22vw); }
+  50% { transform: translateX(-44vw); }
+  70% { transform: translateX(-44vw); }
+  75% { transform: translateX(-66vw); }
+  95% { transform: translateX(-66vw); }
+  100% { transform: translateX(0); }
+}
