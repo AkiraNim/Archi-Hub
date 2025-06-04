@@ -55,7 +55,7 @@ html, body {
   font-family: 'Dosis', sans-serif;
   font-size: 1rem;
   font-weight: 400;
-  color: #ffffff !important;
+  color: #000000 !important;
   padding: 8px 0;
   transition: color 0.3s ease;
   position: relative;
@@ -71,7 +71,7 @@ html, body {
   bottom: -4px;
   width: 100vw;
   height: 2px;
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 .navbar-toggler {
@@ -108,6 +108,12 @@ html, body {
   .navbar-nav .nav-link {
     font-size: 1.4rem;
   }
+}
+
+.nav-item.dropdown .dropdown-menu {
+  left: 0 !important;
+  transform: translateX(-20%);
+  font-family: 'Dosis', sans-serif;
 }
 
 .main-square {
@@ -152,8 +158,8 @@ html, body {
   height: 100%;
   background: linear-gradient(
     90deg, 
-    rgb(156, 229, 252) 4%, 
-    rgb(36, 162, 201) 100%
+    rgb(156, 252, 199) 4%, 
+    rgb(36, 201, 99) 100%
   );
   display: flex;
   justify-content: right;
@@ -162,8 +168,8 @@ html, body {
 
 .aux-text {
   position: relative;
-  left: 22.5vw;
-  top: 20vh;
+  left: 26.5vw;
+  top: 25vh;
   display: flex;
   flex-direction: column;
   gap: 2vh;
@@ -171,11 +177,12 @@ html, body {
 }
 
 .aux-text h3 {
-  height: 20%;
+  height: 10%;
   font-size: 2.5vw;
   font-family: 'Dela Gothic One', sans-serif;
   color: #fff;
   margin: 0;
+  white-space: nowrap;
 }
 
 .aux-text h5 {
@@ -188,7 +195,7 @@ html, body {
 
 .input-wrapper {
   position: relative;
-  top: 24vh;
+  top: 25.5vh;
   right: 37.5vw;
   display: flex;
   flex-direction: column;
@@ -199,7 +206,7 @@ html, body {
 
 .input-header {
   position: absolute;
-  top: -10vh;
+  top: -0vh;
   left: 0;
   display: flex;
   flex-direction: column;
@@ -215,14 +222,6 @@ html, body {
   margin: 0;
 }
 
-.input-header h5 {
-  font-size: 1.2vw;
-  font-family: 'Dela Gothic One', sans-serif;
-  font-weight: 300;
-  color: #666;
-  margin: 0;
-}
-
 .input-row {
   display: flex;
   align-items: center;
@@ -235,8 +234,8 @@ html, body {
   font-size: 1.8vw;
   background: linear-gradient(
     90deg, 
-    rgb(156, 229, 252) 4%, 
-    rgb(36, 162, 201) 100%
+    rgb(156, 252, 199) 4%, 
+    rgb(36, 201, 99) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -278,8 +277,8 @@ html, body {
     font-weight: 300;
     background: linear-gradient(
     90deg, 
-    rgb(156, 229, 252) 4%, 
-    rgb(36, 162, 201) 100%
+    rgb(156, 252, 199) 4%, 
+    rgb(36, 201, 99) 100%
   );
     box-shadow: 0 1.5vw 3vw rgba(23, 47, 108, 0.308);
 }

@@ -158,8 +158,8 @@ html, body {
   height: 100%;
   background: linear-gradient(
     90deg, 
-    rgb(156, 229, 252) 4%, 
-    rgb(36, 162, 201) 100%
+    rgb(252, 238, 156) 4%, 
+    rgb(201, 184, 36) 100%
   );
   display: flex;
   justify-content: right;
@@ -195,7 +195,7 @@ html, body {
 
 .input-wrapper {
   position: relative;
-  top: 10vh;
+  top: 25.5vh;
   right: 37.5vw;
   display: flex;
   flex-direction: column;
@@ -242,8 +242,8 @@ html, body {
   font-size: 1.8vw;
   background: linear-gradient(
     90deg, 
-    rgb(156, 229, 252) 4%, 
-    rgb(36, 162, 201) 100%
+    rgb(252, 238, 156) 4%, 
+    rgb(201, 184, 36) 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -285,8 +285,8 @@ html, body {
     font-weight: 300;
     background: linear-gradient(
     90deg, 
-    rgb(156, 229, 252) 4%, 
-    rgb(36, 162, 201) 100%
+    rgb(252, 238, 156) 4%, 
+    rgb(201, 184, 36) 100%
   );
     box-shadow: 0 1.5vw 3vw rgba(23, 47, 108, 0.308);
 }
