@@ -156,6 +156,7 @@ html, body {
   position: relative;
   width: 20vw;
   height: 20vh;
+  top: 10vh;
   left: 5vw;
   background-color: white;
   border-radius: 1.5vw;
@@ -176,7 +177,7 @@ html, body {
 .dashboard-card i{
   position: relative;
   left: -1.5vw;
-  top: 1vw;
+  top: 3.5vw;
   scale: 3;
 }
 
@@ -200,6 +201,8 @@ html, body {
 }
 
 .card-title {
+  position: relative;
+  top: 5vh;
   font-size: 1.5vw;
   font-family: 'Dela Gothic One', sans-serif;
   color: #5c5c5c;
