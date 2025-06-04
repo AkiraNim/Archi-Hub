@@ -1,6 +1,11 @@
 const ADMIN_CREDENCIAIS = {
-    email: "admin@archhub.com",
+    email: "admin@archihub.com",
     senha: "415263"
+};
+
+const USER_CREDENCIAIS = {
+    email: "user@archihub.com",
+    senha: "123456"
 };
 
 function loginSimulado() {
@@ -9,6 +14,8 @@ function loginSimulado() {
 
     if (email === ADMIN_CREDENCIAIS.email && senha === ADMIN_CREDENCIAIS.senha) {
         window.location.href = "AdminBoard.html";
+    } else if (email === USER_CREDENCIAIS.email && senha === USER_CREDENCIAIS.senha) {
+        window.location.href = "UserBoard.html";
     } else {
         alert("Credenciais inválidas.");
     }
