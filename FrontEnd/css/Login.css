@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Dosis:wght@200..800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: auto;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(10px);
+  height: 6vh;
+  border: none;
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.navbar .container-fluid {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2vw;
+}
+
+.navbar-brand {
+  position: relative;
+  display: flex;
+  left: 10;
+  margin-top: 5vh;
+  transform: translateY(-50%);
+  font-family: 'Abhaya Libre', serif;
+  letter-spacing: 0.3vw;
+  font-weight: 400;
+  font-size: 1.5rem;
+  color: #ffffff !important;
+  z-index: 1050;
+}
+
+.navbar-nav {
+  display: flex;
+  gap: 3vw;
+  padding-right: 0;
+}
+
+.navbar-nav .nav-link {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff !important;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #aaa !important;
+}
+
+.navbar-nav .nav-link.active::after {
+  content: '';
+  position: relative;
+  bottom: -4px;
+  width: 100vw;
+  height: 2px;
+  background-color: #ffffff;
+}
+
+.navbar-toggler {
+  border: none;
+  padding-right: 16px;
+}
+
+.navbar-toggler-icon {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 991.98px) {
+  .navbar {
+    padding: 16px 0;
+  }
+
+  .navbar-brand {
+    font-size: 1.8rem;
+  }
+
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0);
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .navbar-nav .nav-link {
+    font-size: 1.4rem;
+  }
+}
+
+.main-square {
+  width: 100vw;
+  height: 100vh;
+  margin: auto;
+  overflow: visible;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  
+}
+
+.main-square-img img{
+    position: relative;
+    transform: scale(1.2);
+    left: -1vw;
+    width: 110vw;
+    height: 100vh;
+    filter: blur(0.2vw);
+}
+
+.main-intern-square {
+  display: flex;
+  flex-direction: row; /* lado a lado */
+  justify-content: space-between; /* empurra um pra cada lado */
+  align-items: flex-start; /* alinha ao topo */
+  position: relative;
+  top: -80vh;
+  left: 15vw;
+  width: 70vw;
+  height: 70vh;
+  background-color: #ffffff;
+  border-radius: 2vw;
+  z-index: 2000;
+  box-shadow: 0 -1.5vw 3vw rgba(23, 47, 108, 0.308);
+  overflow: hidden;
+}
+
+.aux-square {
+  position: relative;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg, 
+    rgb(156, 229, 252) 4%, 
+    rgb(36, 162, 201) 100%
+  );
+  display: flex;
+  justify-content: right; /* centraliza horizontalmente */
+  align-items: right;     /* centraliza verticalmente */
+}
+
+.aux-text {
+  position: relative;
+  left: 22.5vw;
+  top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  text-align: center;
+}
+
+.aux-text h3 {
+  height: 20%;
+  font-size: 2.5vw;
+  font-family: 'Dela Gothic One', sans-serif;
+  color: #fff;
+  margin: 0;
+}
+
+.aux-text h5 {
+  font-size: 1.2vw;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 300;
+  color: #f3f3f3;
+  margin: 0;
+}
+
+.input-wrapper {
+  position: relative;
+  top: 24vh;
+  right: 37.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+  padding-top: 12vh; /* espaço para os textos acima */
+}
+
+.input-header {
+  position: absolute;
+  top: -10vh;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+  align-items: center;
+  width: 100%;
+}
+
+.input-header h3 {
+  font-size: 2.5vw;
+  font-family: 'Dela Gothic One', sans-serif;
+  color: #232323;
+  margin: 0;
+}
+
+.input-header h5 {
+  font-size: 1.2vw;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 300;
+  color: #666;
+  margin: 0;
+}
+
+.input-row {
+  display: flex;
+  align-items: center;
+  gap: 1vw; /* espaço entre ícone e input */
+}
+
+.input-row i {
+  position: relative;
+  left: 4vw;
+  font-size: 1.8vw;
+  background: linear-gradient(
+    90deg, 
+    rgb(156, 229, 252) 4%, 
+    rgb(36, 162, 201) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  z-index: 1;
+}
+
+
+.input-wrapper input {
+  width: 30vw;
+  height: 8vh;
+  line-height: 100vh;
+  border-radius: 2vw;
+  padding-left: 4vw;
+  color: #232323;
+  font-size: 1.2vw;
+  font-family: 'Dela Gothic One', sans-serif;
+  font-weight: 300;
+  background-color: #ffffff;
+  box-shadow: 0 0.1vw 3vw rgba(23, 47, 108, 0.452);
+  border: none;
+}
+
+.input-name{
+    position: relative;
+    
+}
+
+.input-password{
+    position: relative;
+    
+}
+
+.input-wrapper input:focus {
+    outline: none;
+    border: 0.2vw solid #6afaff; /* Exemplo de borda diferente no foco */
+}
+
+.btn-enter button{
+    position: relative;
+    color: white;
+    width: 14vw;
+    height: 8vh;
+    border: none;
+    border-radius: 2vw;
+    z-index: 2000;
+    font-size: 1.5vw;
+    font-family: 'Dela Gothic One', sans-serif;
+    font-weight: 300;
+    background: linear-gradient(
+    90deg, 
+    rgb(156, 229, 252) 4%, 
+    rgb(36, 162, 201) 100%
+  );
+    box-shadow: 0 1.5vw 3vw rgba(23, 47, 108, 0.308);
+}
+
+.btn-enter button:active {
+    transform: scale(0.97); /* ligeiramente menor ao clicar */
+    box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.4); /* sombra mais próxima */
+}
+
