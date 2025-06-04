@@ -116,19 +116,96 @@ html, body {
   }
 }
 
-
 .nav-item.dropdown .dropdown-menu {
-  left: 0 !important;       /* Garante que o menu se alinhe com o link */
-  transform: translateX(-20%); /* Ajuste para mover mais à esquerda */
+  left: 0 !important;
+  transform: translateX(-20%);
+  z-index: 2000;
+  font-family: 'Dosis', sans-serif;
 }
 
 .main-square {
   width: 100vw;
   height: 100vh;
   margin: auto;
-  overflow: visible;
-  overflow-y: hidden;
   overflow-x: hidden;
-  
+  overflow-y: auto;
 }
 
+.main-intern-square {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5vh;
+  position: relative;
+  top: 15vh;
+  left: 10vw;
+  width: 80vw;
+  min-height: 80vh;
+  background-color: #fdfdfd;
+  border-radius: 2vw;
+  z-index: 20;
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 4vh;
+  overflow: visible;
+}
+
+.dashboard-card {
+  position: relative;
+  width: 20vw;
+  height: 20vh;
+  left: 5vw;
+  background-color: white;
+  border-radius: 1.5vw;
+  box-shadow:
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    0 4px 6px rgba(0, 0, 0, 0.15),
+    0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 2vh 2vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.dashboard-card i{
+  position: relative;
+  left: -1.5vw;
+  top: 1vw;
+  scale: 3;
+}
+
+.card-title {
+  width: 60%;
+  font-size: 1.5vw;
+  font-family: 'Dela Gothic One', sans-serif;
+  color: #333;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  max-width: 80%;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow:
+    0 18px 30px rgba(0, 0, 0, 0.3),
+    0 10px 15px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  font-size: 1.5vw;
+  font-family: 'Dela Gothic One', sans-serif;
+  color: #5c5c5c;
+}
+
+.card-icon {
+  font-size: 2vw;
+  color: #3498db;
+}

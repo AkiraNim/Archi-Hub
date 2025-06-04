@@ -4,7 +4,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Dosis:wght@200..800&family=Roboto:wght@100;300;400;500;700;900&display=swap');
 
-
 html, body {
   margin: 0;
   padding: 0;
@@ -118,7 +117,6 @@ html, body {
   overflow: visible;
   overflow-y: hidden;
   overflow-x: hidden;
-  
 }
 
 .main-square-img img{
@@ -132,9 +130,9 @@ html, body {
 
 .main-intern-square {
   display: flex;
-  flex-direction: row; /* lado a lado */
-  justify-content: space-between; /* empurra um pra cada lado */
-  align-items: flex-start; /* alinha ao topo */
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
   position: relative;
   top: -80vh;
   left: 15vw;
@@ -158,8 +156,8 @@ html, body {
     rgb(36, 162, 201) 100%
   );
   display: flex;
-  justify-content: right; /* centraliza horizontalmente */
-  align-items: right;     /* centraliza verticalmente */
+  justify-content: right;
+  align-items: right;
 }
 
 .aux-text {
@@ -196,7 +194,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   gap: 3vh;
-  padding-top: 12vh; /* espaço para os textos acima */
+  padding-top: 12vh;
 }
 
 .input-header {
@@ -228,7 +226,7 @@ html, body {
 .input-row {
   display: flex;
   align-items: center;
-  gap: 1vw; /* espaço entre ícone e input */
+  gap: 1vw;
 }
 
 .input-row i {
@@ -244,10 +242,8 @@ html, body {
   background-clip: text;
   color: transparent;
   -webkit-text-fill-color: transparent;
-
   z-index: 1;
 }
-
 
 .input-wrapper input {
   width: 30vw;
@@ -266,17 +262,15 @@ html, body {
 
 .input-name{
     position: relative;
-    
 }
 
 .input-password{
     position: relative;
-    
 }
 
 .input-wrapper input:focus {
     outline: none;
-    border: 0.2vw solid #6afaff; /* Exemplo de borda diferente no foco */
+    border: 0.2vw solid #6afaff;
 }
 
 .btn-enter button{
@@ -299,7 +293,6 @@ html, body {
 }
 
 .btn-enter button:active {
-    transform: scale(0.97); /* ligeiramente menor ao clicar */
-    box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.4); /* sombra mais próxima */
+    transform: scale(0.97);
+    box-shadow: 0 0.2vw 1vw rgba(0, 0, 0, 0.4);
 }
-

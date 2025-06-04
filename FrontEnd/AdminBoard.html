@@ -9,6 +9,7 @@
          rel="stylesheet" 
          integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" 
          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -25,9 +26,6 @@
                         <a class="nav-link active" aria-current="page" href="Main.html">MAIN</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Gallery.html">GALLERY</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" href="Projects.html">PROJECTS</a>
                     </li>
                     
@@ -36,9 +34,10 @@
                             EMPLOYEE
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="Login.html">Login</a></li>
+                            <li><a class="dropdown-item" href="AdminBoard.html">Employee Board</a></li>
                             <li><a class="dropdown-item" href="Register.html">Register</a></li>
-                            <li><a class="dropdown-item" href="Profile.html">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">Shut down</a></li>
                         </ul>
                     </li>
                     </ul>
@@ -48,6 +47,22 @@
     </header>
     <div id="#mainSquare" class="main-square">
         
+        <div class="main-intern-square">
+            <a href="register.html" class="dashboard-card">
+                <h4 class="card-title">Register User</h4>
+                <i class="fa-solid fa-address-card"></i>
+            </a>
+
+    <a href="#" class="dashboard-card">
+                <h4 class="card-title">Profile</h4>
+                <i class="fa-solid fa-user"></i>
+            </a>
+            <a href="#" class="dashboard-card">
+                <h4 class="card-title">Shut down</h4>
+                <i class="fa-solid fa-power-off"></i>
+            </a>
+            
+        </div>
                 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
