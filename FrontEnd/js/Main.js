@@ -110,12 +110,15 @@ const paragraph = document.querySelector('.animated-paragraph');
 const htmlContent = paragraph.innerHTML.trim();
 const parts = htmlContent.split(/(<br>|\s+)/).filter(p => p.trim() !== '');
 paragraph.innerHTML = '';
+
 parts.forEach(part => {
     if (part === '<br>') {
         paragraph.appendChild(document.createElement('br'));
     } else {
         const span = document.createElement('span');
         span.textContent = part;
+        span.style.opacity = '0.3';       // visível, mas esmaecido
+        span.style.color = '#AAAAAA';     // cinza claro
         paragraph.appendChild(span);
         paragraph.appendChild(document.createTextNode(' '));
     }
@@ -124,17 +127,25 @@ parts.forEach(part => {
 const spans = paragraph.querySelectorAll('span');
 let wordIndex = 0;
 let isAnimating = false;
+const wordsPerScroll = 3;
 
 function revealNextWord(e) {
-    e.preventDefault();
+    if (e.deltaY > 0) {
+        // Scroll para baixo → revelar palavras
+        e.preventDefault();
+        for (let i = 0; i < wordsPerScroll && wordIndex < spans.length; i++) {
+            spans[wordIndex].style.opacity = '1';
+            spans[wordIndex].style.color = '#FFFFFF';
+            wordIndex++;
+        }
 
-    if (wordIndex < spans.length) {
-        spans[wordIndex].style.opacity = '1';
-        spans[wordIndex].style.color = '#FFFFFF';
-        wordIndex++;
-    }
-
-    if (wordIndex >= spans.length) {
+        if (wordIndex >= spans.length) {
+            document.body.style.overflow = 'auto';
+            window.removeEventListener('wheel', revealNextWord);
+            isAnimating = false;
+        }
+    } else if (e.deltaY < 0) {
+        // Scroll para cima → liberar scroll normal para subir
         document.body.style.overflow = 'auto';
         window.removeEventListener('wheel', revealNextWord);
         isAnimating = false;
@@ -146,14 +157,15 @@ const observer = new IntersectionObserver(entries => {
         if (entry.isIntersecting && !isAnimating && wordIndex < spans.length) {
             isAnimating = true;
             document.body.style.overflow = 'hidden';
-            window.addEventListener('wheel', revealNextWord, {
-                passive: false
-            });
+            window.addEventListener('wheel', revealNextWord, { passive: false });
         }
     });
 }, {
     threshold: 0.5
 });
+
+observer.observe(paragraph);
+
 
 observer.observe(document.querySelector('.second-square'));
 
