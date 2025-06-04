@@ -195,8 +195,8 @@ html, body {
 
 .input-wrapper {
   position: relative;
-  top: 25.5vh;
-  right: 37.5vw;
+  top: 15vh;
+  right: 37vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -289,6 +289,12 @@ html, body {
     rgb(201, 184, 36) 100%
   );
     box-shadow: 0 1.5vw 3vw rgba(23, 47, 108, 0.308);
+}
+
+.btn-enter button:hover {
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
+    color: #232323;
 }
 
 .btn-enter button:active {
