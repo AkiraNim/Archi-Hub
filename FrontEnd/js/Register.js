@@ -16,10 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const registerBtn = document.querySelector(".btn-enter button");
 
   registerBtn.addEventListener("click", function () {
-    const name = document.querySelector("input[name='name']").value;
-    const username = document.querySelector("input[name='user']").value;
+    const username = document.querySelector("input[name='Username']").value;
+    const password = document.querySelector("input[name='Password']").value;
 
-    if (!name || !username ) {
+    if (!username || !password ) {
       alert("Preencha todos os campos obrigatórios.");
       return;
     }
@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const novoUsuarioRef = db.ref("usuarios").push();
     novoUsuarioRef
       .set({
-        nome: name,
-        username: username
+        Username: username,
+        Password: password
       })
       .then(() => {
         alert("Usuário cadastrado com sucesso.");
